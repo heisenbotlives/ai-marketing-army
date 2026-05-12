@@ -72,6 +72,10 @@ GitHub markdown] --> Orchestrator
 
 See [`docs/architecture.md`](docs/architecture.md) for the full architecture.
 
+![AI Marketing Army architecture diagram](diagrams/architecture-mockup.png)
+
+Interactive HTML version: [`diagrams/architecture-mockup.html`](diagrams/architecture-mockup.html)
+
 ## The agents
 
 Six specialists, each with one job:
