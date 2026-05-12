@@ -2,35 +2,39 @@
 
 ## Milestone 1 — Public architecture repo
 
-- Define framing and system architecture
-- Document agent roles
-- Document public/private boundary
+- Define the Hermes + Kanban + MCP framing
+- Document the six specialist agents
+- Document the three-layer knowledge base
+- Document public/private boundaries
 - Add starter prompt templates
 - Add sanitised example workflow
 
 ## Milestone 2 — Private Obsidian operating base
 
 - Create vault folders and templates
-- Add initial topic maps
+- Add brand/reference placeholders
 - Add source-note workflow
-- Connect outputs back to learnings
+- Add learning-log workflow
+- Connect approved learnings back into durable context
 
-## Milestone 3 — Manual proof-of-concept run
+## Milestone 3 — Kanban proof of concept
 
-- Pick one public topic
-- Run research → strategy → draft → review manually with AI help
-- Publish sanitised example outputs
+- Create a synthetic marketing brief
+- Break it into a Kanban task graph
+- Run specialist-style tasks manually or semi-manually
+- Capture handoffs and review decisions
+- Publish sanitised outputs in `examples/`
 
-## Milestone 4 — Light automation
+## Milestone 4 — Connector design
 
-- Automate repeatable source collection
-- Standardise agent prompts
-- Create repeatable review scorecards
-- Add logging of outputs and learnings
+- Define read/write boundaries for each MCP connector
+- Mock Google Drive operational data access with synthetic files
+- Mock social/community monitoring with public-safe examples
+- Document approval requirements for write actions
 
 ## Milestone 5 — Portfolio polish
 
-- Add diagrams
-- Add case-study write-up
-- Add recruiter-friendly README section
-- Add short demo walkthrough
+- Add a short case-study walkthrough
+- Add screenshots or diagrams
+- Add recruiter-friendly summary
+- Add a demo run showing brief → Kanban → agent outputs → human review

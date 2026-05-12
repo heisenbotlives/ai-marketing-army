@@ -1,40 +1,67 @@
 # Workflows
 
-## Workflow 1: Market signal to content brief
+The system works through Kanban. The Orchestrator decomposes requests, agents complete specialist subtasks, and a human approval gate controls customer-facing output.
+
+## Workflow 1: Marketing brief to task graph
 
 ```mermaid
 sequenceDiagram
     participant Human as Human marketer
-    participant Researcher as Research agent
-    participant KB as Obsidian KB
-    participant Strategist as Strategy agent
-    participant Brief as Brief doc
+    participant Orch as Orchestrator
+    participant Board as Kanban board
+    participant Agents as Specialist agents
 
-    Human->>Researcher: Investigate topic or company
-    Researcher->>KB: Save structured source notes
-    Strategist->>KB: Read relevant notes
-    Strategist->>Brief: Create content/campaign brief
-    Human->>Brief: Review and approve
+    Human->>Orch: Submit marketing brief
+    Orch->>Board: Create task graph and dependencies
+    Board->>Agents: Assign specialist tasks
+    Agents->>Board: Return findings/drafts
+    Orch->>Human: Compile shift report and review queue
 ```
 
-## Workflow 2: Brief to draft outputs
+**Example task graph:**
 
-1. Human approves a brief.
-2. Copywriter drafts multiple content angles.
-3. SEO Analyst suggests search-led version if relevant.
-4. Reviewer checks accuracy, tone, and strategic fit.
-5. Human chooses what to publish or save.
+1. Research: summarise market context and competitor positioning
+2. Performance Analyst: review relevant performance exports
+3. SEO: identify search opportunities
+4. Content: draft long-form asset from approved brief
+5. Social & Community: adapt approved angle into channel-native drafts
+6. Orchestrator: compile review packet for human approval
 
-## Workflow 3: Learning loop
+## Workflow 2: Research to strategy packet
 
-1. Capture what was published.
-2. Add performance notes or qualitative feedback.
-3. Store learnings in Obsidian.
-4. Feed learnings into the next brief.
+1. Orchestrator creates a Research task from a brief.
+2. Research reads public sources and brand/reference docs.
+3. Research writes a source-backed findings note.
+4. Orchestrator creates downstream Content, SEO, or Social tasks based on findings.
+5. Human reviews any strategic assumptions before public-facing production.
 
-## Workflow 4: Employer-facing demo
+## Workflow 3: Performance to experiment
+
+1. Performance Analyst reads campaign or analytics exports from the operational data layer.
+2. It identifies what appears to be working, underperforming, or unclear.
+3. It proposes experiments with measurement criteria.
+4. Orchestrator creates follow-up tasks for Content, Social, or SEO.
+5. Human approves the experiment before launch.
+
+## Workflow 4: Draft to approval
+
+1. Content, Social, or SEO produces a draft.
+2. Draft includes sources, assumptions, and claims that need checking.
+3. Reviewer/human checks accuracy, tone, privacy, and strategic fit.
+4. Approved work can be published or scheduled.
+5. Rejected/revised work returns to Kanban with specific feedback.
+
+## Workflow 5: Learning loop
+
+1. Capture what was shipped.
+2. Capture performance or qualitative feedback.
+3. Performance Analyst converts results into a learning note.
+4. The knowledge base is updated.
+5. Future briefs use those learnings.
+
+## Workflow 6: Employer-facing demo
 
 1. Pick a public, non-sensitive topic.
-2. Run a small research-to-brief workflow.
-3. Publish sanitised examples in this repo.
-4. Explain what the system did, what the human reviewed, and what would improve next.
+2. Run a synthetic research → strategy → draft → review workflow.
+3. Save sanitised examples in this repo.
+4. Explain what the system did, what the human reviewed, and what would plug into real company systems.

@@ -5,34 +5,51 @@ The working knowledge base should stay private. This file documents the suggeste
 ```text
 AI Marketing Army/
   00 Inbox/
-  01 Sources/
+  01 Brand and Reference/
+    Voice Guide/
+    Positioning/
+    ICPs and Personas/
+    Product Specs/
+    Glossary/
+    Approved Claims/
+  02 Sources/
     Articles/
     Companies/
     Social Threads/
     Podcasts/
-  02 Entities/
+    Docs/
+  03 Entities/
     Companies/
     People/
     Products/
-  03 Topics/
+    Competitors/
+  04 Topics/
     AI Agents/
     Marketing Automation/
     Content Strategy/
     SEO/
-  04 Briefs/
-  05 Outputs/
+    Community/
+  05 Briefs/
+  06 Outputs/
     Drafts/
     Approved/
-  06 Learnings/
+    Rejected/
+  07 Performance and Learnings/
   90 Templates/
 ```
 
 ## Note types
 
+- Brand voice note
 - Source note
 - Company profile
 - Topic map
 - Content brief
 - Output draft
 - Review note
+- Experiment note
 - Learning log
+
+## Public/private rule
+
+The Obsidian vault is the private workshop. Only cleaned, sanitised, portfolio-safe examples should be copied from Obsidian into this public repo.
