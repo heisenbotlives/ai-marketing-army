@@ -1,64 +1,62 @@
 # AI Marketing Army
 
-A public proof-of-concept for an AI-assisted marketing operating system.
+A working proof-of-concept for an AI-powered growth marketing team.
 
-The goal is to show how one marketer can use AI agents, structured knowledge management, and human review loops to get the leverage of a small research, strategy, content, SEO, and analytics team.
+Six specialist agents coordinate through a shared Kanban board, read from a structured knowledge base, and produce marketing work with humans approving anything customer-facing. The system runs on Hermes Agent, an open-source autonomous agent platform.
 
-This repo is intentionally framed as a **portfolio architecture project**: it documents the system design, workflows, prompts, evaluation approach, and safe operating principles. The private working knowledge base lives separately in Obsidian.
+This repo documents the architecture, agent roles, workflows, and operating principles. It's framed as a portfolio piece showing how one marketer can build genuine leverage from AI infrastructure, not just prompt a chatbot.
 
 ## What this demonstrates
 
-- Agentic workflow design for marketing tasks
-- Research-to-strategy-to-content pipelines
-- Prompt and role design for specialist agents
-- Human-in-the-loop review and quality control
-- Knowledge-base architecture using Obsidian
+- Multi-agent orchestration via a shared Kanban board
+- Specialist agent design with defined roles, tools, and handoffs
+- Three-layer knowledge base architecture (brand docs, operational data, skills)
+- MCP connector design for reading and writing to external systems
+- Human-in-the-loop approval gates for customer-facing output
 - Practical safety, privacy, and source-handling standards
 - Clear documentation for non-technical stakeholders
 
 ## Current status
 
-**Stage:** Architecture and proof of concept.
+**Stage:** Working proof of concept. The architecture is built, the components are wired together, and the system runs on synthetic data for demo purposes. Real data sources, credentials, and connectors would plug in on day one of a role.
 
-This is not presented as a fully autonomous marketing department. It is an evolving system design for using AI responsibly and effectively in marketing work.
+## System architecture
 
-## System concept
+The system has four layers sitting on top of the Hermes Agent runtime:
 
-```mermaid
-flowchart TD
-    Sources[Market sources
-blogs, docs, social, competitors, search] --> Researcher[Research agents]
-    Researcher --> KB[Private Obsidian knowledge base]
-    KB --> Strategist[Strategy agent]
-    Strategist --> Brief[Content / campaign brief]
-    Brief --> Writers[Copy, SEO, docs, community agents]
-    Writers --> Reviewer[Human + AI review loop]
-    Reviewer --> PublicOutputs[Approved public outputs]
-    Reviewer --> Learnings[Performance notes + learnings]
-    Learnings --> KB
-```
+1. **Agents** — Six specialists, each with a narrow remit
+2. **Coordination** — A Kanban board where agents claim work, pass tasks, and produce output
+3. **Knowledge base** — Three structured sources the agents read from
+4. **External connectors** — MCP connectors to read from and write to external tools
+
+A human approval gate sits between the system and any customer-facing output.
+
+(See `docs/architecture.md` for the full diagram and detail.)
+
+## The agents
+
+Six specialists, each with one job:
+
+- 🎯 **Orchestrator** — Grooms the Kanban, breaks marketing briefs into tasks, assigns to specialists, compiles daily shift reports
+- 🔍 **Research** — Tracks industry trends, competitor moves, social sentiment, and vertical insights
+- 📊 **Performance Analyst** — Reads analytics and ad platform data, surfaces what's working, designs experiments
+- ✍️ **Content** — Produces blog posts, long-form pieces, and thought leadership, all run through the brand voice guide
+- 📣 **Social & Community** — Drafts and schedules content for X, Discord, and Telegram, monitors sentiment
+- 🔎 **SEO** — Keyword research, on-page optimisation, content gap analysis, internal linking
+
+Each agent has its own system prompt, tool access, and MCP connectors. See `docs/agent-roles.md` for the full specs.
+
+## Knowledge base
+
+Three layers, each with a different purpose and lifecycle:
+
+- **Brand and reference** (Obsidian, synced via GitHub) — Voice, positioning, ICPs, glossary, product specs
+- **Operational data** (Google Drive) — Analytics exports, customer research, campaign performance, competitor intel
+- **Skills** (GitHub) — Hermes skills as markdown. Reusable, versioned procedures
+
+Splitting these keeps prompts narrow and citations clean. See `docs/knowledge-base.md`.
 
 ## Repo map
 
-- [`docs/architecture.md`](docs/architecture.md) — system architecture and design principles
-- [`docs/agent-roles.md`](docs/agent-roles.md) — specialist agent roles
-- [`docs/workflows.md`](docs/workflows.md) — core marketing workflows
-- [`docs/evaluation.md`](docs/evaluation.md) — how outputs are judged
-- [`docs/privacy-and-safety.md`](docs/privacy-and-safety.md) — public/private boundaries and safety rules
-- [`prompts/`](prompts/) — starter prompt templates for agent roles
-- [`examples/`](examples/) — sanitised demo inputs and outputs
-- [`obsidian/`](obsidian/) — suggested private knowledge-base structure
-- [`roadmap.md`](roadmap.md) — build plan
-
-## Public vs private boundary
-
-This public repo contains architecture, examples, and safe templates. It does **not** contain private job-search notes, contact lists, employer-specific application materials, API keys, credentials, or raw scraped data.
-
-The intended split is:
-
-- **GitHub:** public showroom — clean architecture, examples, and proof of capability
-- **Obsidian:** private workshop — messy research, personal notes, target companies, drafts, and operating memory
-
-## Why this exists
-
-This project is designed to demonstrate practical AI fluency in a marketing context: not just using chatbots, but designing repeatable systems that combine research, strategy, creative judgement, automation, and review.
+- [`docs/architecture.md`](docs/architecture.md) — Full system architecture and design principles
+- [`docs/agent-roles.md`](docs/agent-roles.
