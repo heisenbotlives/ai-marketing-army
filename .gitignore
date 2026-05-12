@@ -1,0 +1,13 @@
+# Local/private files
+.env
+.env.*
+!.env.example
+.DS_Store
+node_modules/
+__pycache__/
+*.log
+
+# Private working notes should stay in Obsidian, not this public repo
+private/
+notes/
+outputs/private/
