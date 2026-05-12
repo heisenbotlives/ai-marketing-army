@@ -51,7 +51,7 @@ Six specialists, each with one job:
 - 📣 **Social & Community** — Drafts and schedules content for X, Discord, and Telegram, monitors sentiment
 - 🔎 **SEO** — Keyword research, on-page optimisation, content gap analysis, internal linking
 
-Each agent has its own system prompt, tool access, handoff rules, and MCP connector assumptions. See [`docs/agent-roles.md`](docs/agent-roles.md) for the full specs.
+Each agent has its own role, system prompt, tool access, handoff rules, and MCP connector assumptions. See [`docs/agent-roles.md`](docs/agent-roles.md) for the short role overview and [`docs/agent-specs.md`](docs/agent-specs.md) for detailed skills, connectors, tasks, outputs, and approval boundaries.
 
 ## Knowledge base
 
@@ -66,7 +66,8 @@ Splitting these keeps prompts narrow, citations cleaner, and public/private boun
 ## Repo map
 
 - [`docs/architecture.md`](docs/architecture.md) — Full system architecture and design principles
-- [`docs/agent-roles.md`](docs/agent-roles.md) — Six specialist agent specs
+- [`docs/agent-roles.md`](docs/agent-roles.md) — Short overview of the six agent roles
+- [`docs/agent-specs.md`](docs/agent-specs.md) — Detailed tasks, skills, connectors, outputs, and approval boundaries
 - [`docs/workflows.md`](docs/workflows.md) — Kanban-based marketing workflows
 - [`docs/knowledge-base.md`](docs/knowledge-base.md) — Three-layer knowledge architecture
 - [`docs/mcp-connectors.md`](docs/mcp-connectors.md) — Connector assumptions and boundaries
