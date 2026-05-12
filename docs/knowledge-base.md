@@ -47,6 +47,8 @@ The knowledge base is split into three layers because not all context has the sa
 
 **Storage:** GitHub markdown files or Hermes skill files.
 
+**Current repo examples:** The [`skills/`](../skills/) directory contains starter Hermes-style marketing skills for mock campaign runs, including brief intake, audience/ICP research, messaging angle generation, asset drafting, measurement planning, and human approval review.
+
 **Purpose:** Reusable procedures that tell agents how to do recurring work.
 
 **Examples:**

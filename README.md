@@ -61,6 +61,8 @@ Three layers, each with a different purpose and lifecycle:
 - **Operational data** — Google Drive. Analytics exports, customer research, campaign performance, competitor intel
 - **Skills** — GitHub. Hermes skills as markdown: reusable, versioned procedures
 
+This repo includes a starter skill pack under [`skills/`](skills/) for mock campaign planning, audience research, messaging, asset drafting, measurement planning, and human approval review.
+
 Splitting these keeps prompts narrow, citations cleaner, and public/private boundaries easier to manage. See [`docs/knowledge-base.md`](docs/knowledge-base.md).
 
 ## Repo map
@@ -74,6 +76,7 @@ Splitting these keeps prompts narrow, citations cleaner, and public/private boun
 - [`docs/evaluation.md`](docs/evaluation.md) — Output quality gates and review scorecards
 - [`docs/privacy-and-safety.md`](docs/privacy-and-safety.md) — Public/private boundaries and safety rules
 - [`prompts/`](prompts/) — Starter prompt templates for each agent
+- [`skills/`](skills/) — Starter Hermes-style marketing workflow skills for mock campaign runs
 - [`examples/`](examples/) — Sanitised demo inputs and outputs
 - [`obsidian/`](obsidian/) — Suggested private knowledge-base structure
 - [`roadmap.md`](roadmap.md) — Build plan
