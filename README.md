@@ -33,42 +33,6 @@ The system has four layers sitting on top of the Hermes Agent runtime:
 
 A human approval gate sits between the system and any customer-facing output.
 
-```mermaid
-flowchart TD
-    Brief[Human marketing brief] --> Orchestrator[Orchestrator agent]
-    Orchestrator --> Kanban[Shared Kanban board]
-
-    Kanban --> Research[Research agent]
-    Kanban --> Performance[Performance Analyst agent]
-    Kanban --> Content[Content agent]
-    Kanban --> Social[Social & Community agent]
-    Kanban --> SEO[SEO agent]
-
-    BrandKB[Brand & reference KB
-Obsidian + GitHub] --> Research
-    BrandKB --> Content
-    BrandKB --> Social
-    BrandKB --> SEO
-
-    OpsData[Operational data
-Google Drive / analytics exports] --> Performance
-    Skills[Reusable skills
-GitHub markdown] --> Orchestrator
-    Skills --> Research
-    Skills --> Performance
-    Skills --> Content
-    Skills --> Social
-    Skills --> SEO
-
-    Research --> Kanban
-    Performance --> Kanban
-    Content --> Review[Human approval gate]
-    Social --> Review
-    SEO --> Review
-    Review --> Approved[Approved marketing output]
-    Review --> Learnings[Learning log]
-    Learnings --> BrandKB
-```
 
 See [`docs/architecture.md`](docs/architecture.md) for the full architecture.
 
